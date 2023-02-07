@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+  body {
+    margin: 0;
+  }
+
+  header {
+    background: #eee;
+    text-align: center;
+    padding: 32px 0;
+  }
+
+  h1 {
+    margin: 16px 0 0;
+    font-size: 24px;
+    font-family: 'Vollkorn', serif;
+  }
+
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 16px 0 0;
+    font-family: 'Vollkorn', serif;
+
+  }
+
+  section {
+    width: 400px;
+    margin: 64px auto 0;
+  }
+
+  section p {
+    margin-top: 16px;
+    line-height: 1.8;
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Vollkorn', serif;
+  }
+
+  main {
+    padding: 64px 0;
+  }
+
+.sample {
+  width: 400px;
+  height: auto;
+}
+
+.sample2 {
+  width: 400px;
+  height: auto;
+  text-align: center;
+}
+
+/* footer */
+
+footer {
+  background: #4c4948;
+  padding: 16px 0;
+  color: #eee;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.follow-me {
+  list-style: none;
+  margin: 0 0 -8px;
+  overflow: hidden;
+  padding: 0;
+}
+.follow-me li {
+  float: left;
+  margin: 0 8px 8px 0;
+  padding: 0;
+}
+.follow-me li a::before {
+  background-color: #eee;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: #333;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 16px;
+  height: 44px; /* Button height */
+  line-height: 44px; /* Button height */
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  text-align: center;
+  width: 44px; /* Button width */
+}
+
+.follow-me li a:hover::before {
+  color: #fff;
+}
+.follow-me li a[href*="instagram.com"]::before      { content: "\f16d"; }
+.follow-me li a[href*="twitter.com"]::before        { content: "\f099"; }
+.follow-me li a[href*="youtube.com"]::before        { content: "\f16a"; }
+.follow-me li a[href$="/subscribe"]::before         { content: "\f000"; font-family: blogicon; }
+
+.follow-me li a[href*="instagram.com"]:hover::before      { background-color: #125688; }
+.follow-me li a[href*="twitter.com"]:hover::before        { background-color: #55acee; }
+.follow-me li a[href*="youtube.com"]:hover::before        { background-color: #cd201f; }
+
+/* animation */
+
+.animate {
+  opacity: 0;
+  transition: opacity .3s, transform .3s;
+}
+
+.animate.slide-from-left {
+  transform: translateX(-40px);
+}
+
+.animate.slide-from-right {
+  transform: translateX(40px);
+}
+
+.animate.appear {
+  opacity: 1;
+  transform: none;
+}
